@@ -16,19 +16,13 @@ create_symlinks() {
   done
   
   # the above loop only does files, manually symlink starship config
+  mkdir -p ~/.config
   ln -s $script_dir/.config/starship.toml ~/.config/starship.toml
 }
 
 create_symlinks
 
-# install homebrew
-eval $($HOMEBREW_PREFIX/bin/brew shellenv)
-
-# git clone https://github.com/Homebrew/brew homebrew
-# eval "$(homebrew/bin/brew shellenv)"
-# brew update --force --quiet
-# chmod -R go-w "$(brew --prefix)/share/zsh"
-
 # install shell extensions
+eval $($HOMEBREW_PREFIX/bin/brew shellenv)
 brew install starship
 brew install zsh-syntax-highlighting
