@@ -14,6 +14,9 @@ create_symlinks() {
       rm -rf ~/$name
       ln -s $script_dir/$name ~/$name
   done
+  
+  # the above loop only does files, manually symlink starship config
+  ln -s $script_dir/.config/starship.toml ~/.config/starship.toml
 }
 
 create_symlinks
