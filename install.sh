@@ -18,5 +18,12 @@ create_symlinks() {
 
 create_symlinks
 
+# install homebrew
+git clone https://github.com/Homebrew/brew homebrew
+eval "$(homebrew/bin/brew shellenv)"
+brew update --force --quiet
+chmod -R go-w "$(brew --prefix)/share/zsh"
+
+# install shell extensions
 brew install starship
 brew install zsh-syntax-highlighting
