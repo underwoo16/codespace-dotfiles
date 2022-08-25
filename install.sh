@@ -19,3 +19,4 @@ create_symlinks() {
 create_symlinks
 
 brew install starship
+brew install zsh-syntax-highlighting
