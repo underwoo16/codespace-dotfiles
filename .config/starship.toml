@@ -25,4 +25,4 @@ style = "bold green"
 style = "#d78700"
 
 [git_metrics]
-disabled = false
+disabled = true
